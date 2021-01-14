@@ -1,14 +1,12 @@
 const { Client, MessageEmbed, Message} = require('discord.js');
 const client = new Client();
 
-console.log("Hello World!!")
-
 client.on('ready', () => {
     console.log(`Bot is ready as ${client.user.tag}!`);
 });
 
 client.on('message', async msg => {
-    console.log(msg.content)
+    console.log(`Bot recive: [${msg.content}], from: [${msg.author}]` )
     if ( msg.content === 'ping'){
         msg.reply('Pong!');
     }
